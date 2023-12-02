@@ -11,7 +11,7 @@ const tajawal = Tajawal({
 });
 const HeroSection = () => {
   return (
-    <section className="w-full h-screen bg-[#F3F3F3] border">
+    <section className="w-full h-screen bg-[#F3F3F3] border overflow-hidden">
       <div className="herocontainerpara absolute md:p-20 p-5 space-y-5 font-semibold text-primary z-10">
         <div className="textcontainer space-y-5">
           <h1 className="font-bold text-6xl ">
@@ -31,7 +31,7 @@ const HeroSection = () => {
         </div>
       </div>
       <Image
-        className="absolute left-0 bottom-0 md:-bottom-24"
+        className="relative object-cover min-h-screen"
         src="/HeroSection/Hero-image-1.png"
         alt="hero"
         width={1700}
