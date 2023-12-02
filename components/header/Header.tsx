@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <header>
-        <nav className='w-full h-24 bg-background text-primary flex justify-around items-center'>
+        <nav className='w-4/5 h-24 bg-background text-primary m-auto flex justify-between items-center'>
             <div className={cn("text-2xl", chakra.className)}>
                 <Link href={"/"}>
                VK STORE

@@ -4,6 +4,7 @@ import './globals.css'
 import { cn } from '@/lib/utils'
 import Header from '@/components/header/Header'
 import { ThemeProvider } from '@/components/theme-provider'
+import Footer from '@/components/footer/Footer'
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -36,6 +37,7 @@ export default function RootLayout({
       >
         <Header/>
         {children}
+        <Footer/>
     </ThemeProvider>
     </body>
   </html>

@@ -11,7 +11,7 @@ const CategorySection = () => {
       <h1 className={"text-bold text-2xl"}>Shop By Categories</h1>
       <Link href={"/viewall"} className="hidden md:block text-lg">Show All</Link>
       </div>
-      <div className="itemsboxcontainer grid grid-cols-1 md:grid-cols-3 place-items-center gap-14">
+      <div className="itemsboxcontainer grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-14">
         <ItemsBox/>
         <ItemsBox/>
         <ItemsBox/>
