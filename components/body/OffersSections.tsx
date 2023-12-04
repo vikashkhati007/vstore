@@ -7,7 +7,7 @@ import { Button } from "../ui/button";
 const kanit = Kanit({ subsets: ["latin"], weight: "400" });
 const OffersSections = () => {
   return (
-    <section className="w-4/5 m-auto max-h-fit py-10 flex flex-col lg:flex-row gap-5">
+    <section className="w-4/5 m-auto max-h-fit py-10 flex flex-col lg:flex-row gap-5 mt-10">
       <div className="textcontainer space-y-5">
         <h1 className="text-3xl font-bold">Deals of the Month</h1>
         <p className="text-md">

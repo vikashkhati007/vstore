@@ -18,8 +18,8 @@ const Header = () => {
             </div>
             <ul className='hidden md:flex justify-center items-center gap-5 text-lg'>
                 <Link href={"/"}>Home</Link>
-                <Link href={"/shop"}>Shop</Link>
-                <Button>Login</Button>
+                <Link href={"/products"}>Shop</Link>
+                <Link href={"/login"}><Button>Login</Button></Link>
             </ul>
         </nav>
     </header>
