@@ -4,7 +4,9 @@ import React from "react";
 import CollectionItems from "./NewCollectionItems/CollectionItems";
 const didact = Didact_Gothic({ subsets: ["latin"], weight: "400" });
 
-const NewCollection = () => {
+const NewCollection = async () => {
+  const d = fetch(`https://e-commerce-payload-8e26543.payloadcms.app/api/products?sort=-createdAt&limit=9&page=1&depth=1`);
+  const data = await (await d).json();
   return (
     <section className={cn("w-4/5 m-auto max-h-fit", didact.className)}>
       <div className="textcontainer">
@@ -13,11 +15,16 @@ const NewCollection = () => {
       <div className="productshowing font-semibold text-lg p-5">
       <p>Showing 1-3 of 15 Products</p>
       </div>
-      <div className="productscontainer grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-14">
-      <CollectionItems/>
-      <CollectionItems/>
-      <CollectionItems/>
-      </div>
+      <div className="productscontainer flex flex-shrink flex-wrap gap-10">
+          {data.docs.map((item: any) => (
+            <CollectionItems
+              key={item.id}
+              image={item.meta.image.url}
+              title={item.meta.title}
+              description={item.meta.description}
+            />
+          ))}
+        </div>
     </section>
   );
 };
