@@ -2,6 +2,8 @@ import { cn } from "@/lib/utils";
 import { Didact_Gothic } from "next/font/google";
 import React from "react";
 import CollectionItems from "./NewCollectionItems/CollectionItems";
+import { Button } from "../ui/button";
+import Link from "next/link";
 const didact = Didact_Gothic({ subsets: ["latin"], weight: "400" });
 
 const NewCollection = async () => {
@@ -20,10 +22,13 @@ const NewCollection = async () => {
             <CollectionItems
               key={item.id}
               image={item.meta.image.url}
-              title={item.meta.title}
-              description={item.meta.description}
+              title={item.meta.title.substring(0, 20) + "..."}
+              description={item.meta.description.substring(0, 100) + "..."}
             />
           ))}
+        </div>
+        <div className="buttoncontainer flex justify-center items-center py-5">
+        <Link href={"/products"} className="font-semibold bg-gray-300 px-3 py-2 rounded-md"> Show More</Link>
         </div>
     </section>
   );

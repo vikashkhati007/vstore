@@ -56,15 +56,15 @@ const page = async (e:any) => {
       </div>
       <div className="showingproductscontainer">
         <div className="font-bold text-xl py-5">
-          <h1>Showing 1-9 of 15 Products</h1>
+          <h1>Showing {!e.searchParams.page? '1' : '9'}-{!e.searchParams.page? '9' : '15'} of 15 Products</h1>
         </div>
         <div className="productscontainer flex flex-shrink flex-wrap gap-10">
           {data.docs.map((item: any) => (
             <CollectionItems
               key={item.id}
               image={item.meta.image.url}
-              title={item.meta.title}
-              description={item.meta.description}
+              title={item.meta.title.substring(0, 20) + "..."}
+              description={item.meta.description.substring(0, 100) + "..."}
             />
           ))}
         </div>
