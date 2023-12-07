@@ -47,7 +47,3 @@ We welcome contributions! Feel free to open issues, create pull requests, or sug
 ## Acknowledgments
 
 - Special thanks to the Next.js and Tailwind CSS communities for their fantastic tools and resources.
-
----
-
-Make sure to replace placeholders such as `[License Name]`, `[Link to Next.js GitHub]`, and `[Link to Tailwind CSS GitHub]` with the actual information. This template provides a solid foundation, and you can customize it further based on your project's specifics.
